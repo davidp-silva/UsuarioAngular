@@ -1,0 +1,89 @@
+   
+    
+    <div>
+      <h2>Você está a um passo de criar sua conta Training Banking </h2>
+        <form [formGroup]="form" class="page">  
+              <div class="page">
+                <label class="field a-field a-field_a1">
+                  <input class="field__input a-field__input" placeholder="Digite seu nome" required  maxlength="250"
+                  formControlName="nome">
+                  <span class="a-field__label-wrap">
+                    <span class="a-field__label">Nome</span>
+                  </span>
+                </label>
+              
+              </div>
+              <div class="page">
+                <small *ngIf="form.controls.nome.invalid && !form.controls.nome.pristine"  class="small">
+                  Este campo deve conter entre 3 e 250 caracteres.
+                </small>
+              </div>
+              <div class="page">
+                <label class="field a-field a-field_a1">
+                  <input class="field__input a-field__input" placeholder="Digite o Cpf" required
+                  maxlength="11"
+                  formControlName="cpf">
+                  <span class="a-field__label-wrap">
+                    <span class="a-field__label">CPF</span>
+                  </span>
+                </label>
+              </div>
+              <div class="page">
+                <small *ngIf="form.controls.cpf.invalid && !form.controls.cpf.pristine" class="small">
+                  Digite um cpf valido.
+                </small>
+              </div>
+              
+              <div class="page">
+                <label class="field a-field a-field_a1">
+                  <input class="field__input a-field__input" placeholder="Digite o E-mail" required  maxlength="60"
+                  formControlName="email">
+                  <span class="a-field__label-wrap">
+                    <span class="a-field__label">E-mail</span>
+                  </span>
+                </label>
+              </div>
+              <div class="page">
+                <small *ngIf="form.controls.email.invalid && !form.controls.email.pristine"  class="small">
+                  Digite um e-mail valido.
+                </small>
+              </div>
+            
+              <div class="page">
+                <label class="field a-field a-field_a1">
+                  <input class="field__input a-field__input" maxlength="60"
+                  formControlName="telefone"
+                   required 
+                  placeholder="Informe um telefone"
+                  mask="(00) 00000-0000" > 
+                  <span class="a-field__label-wrap">
+                    <span class="a-field__label">Telefone</span>
+                  </span>
+                </label>
+              </div>
+              <div class="page">
+              <small *ngIf="form.controls.telefone.invalid && !form.controls.telefone.pristine"  class="small">
+                Infomre um telefone valido.
+              </small>
+              </div>
+                <div class="page">
+                <label class="field a-field a-field_a1">
+                  <input class="field__input a-field__input" placeholder="Digite o Endereço" required maxlength="60"
+                  formControlName="endereco">
+                  <span class="a-field__label-wrap">
+                    <span class="a-field__label">Endereço</span>
+                  </span>
+                </label>
+              </div>
+              <div class="page">
+              <small *ngIf="form.controls.endereco.invalid && !form.controls.endereco.pristine"  class="small">
+                Este campo deve conter entre 3 e 500 caracteres.
+              </small>
+            </div>
+            <br/>
+            <br/>
+              <div class="page">
+              <button [disabled]="form.invalid"  (click)="add()" class="button a-field" >Salvar</button>
+            </div>
+          </form>
+    </div>

@@ -1,0 +1,50 @@
+.nav {
+  position: sticky;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  top: 0;
+}
+.nav {
+  background: #dbbb81;
+  
+}
+.nav__title {
+  margin: 0px 30px;
+  color: white;
+}
+.nav__item {
+  display: inline-block;
+  margin: 0px 30px;
+  color: white;
+}
+
+
+.footer {
+  position:absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+  height: 100px;
+}
+
+.page{
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1000px;
+  margin: 100px;
+  padding: 25px;
+  display: grid;
+  grid-gap: 30px;
+  top: 35px;
+  
+  order: 1;
+ 
+}
+
+.button {border-radius: 8px;}
+
